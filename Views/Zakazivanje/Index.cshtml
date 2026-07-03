@@ -1,0 +1,102 @@
+@model ZakazivanjeVM
+@{
+    ViewData["Title"] = "Zakazivanje konsultacije";
+}
+<h2>Zakazivanje konsultacije</h2>
+
+@if (!string.IsNullOrEmpty(Model.Poruka))
+{
+    <div class="alert alert-warning">@Model.Poruka</div>
+}
+
+@if (!Model.PrikaziTermine)
+{
+    <form asp-action="ProveriTermine" method="post" id="formaZakazivanje" style="max-width:600px;">
+        <div class="mb-3">
+            <label asp-for="ImePrezimeKlijenta" class="form-label"></label>
+            <input asp-for="ImePrezimeKlijenta" class="form-control" />
+            <span asp-validation-for="ImePrezimeKlijenta" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="NazivFirme" class="form-label"></label>
+            <input asp-for="NazivFirme" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Telefon" class="form-label"></label>
+            <input asp-for="Telefon" class="form-control" />
+            <span asp-validation-for="Telefon" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DatumKonsultacije" class="form-label"></label>
+            <input asp-for="DatumKonsultacije" type="date" class="form-control" />
+            <span asp-validation-for="DatumKonsultacije" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Napomena" class="form-label"></label>
+            <textarea asp-for="Napomena" class="form-control" rows="2"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Prikaži slobodne termine</button>
+    </form>
+}
+else
+{
+    <form asp-action="Zakazi" method="post">
+        <input type="hidden" asp-for="ImePrezimeKlijenta" />
+        <input type="hidden" asp-for="NazivFirme" />
+        <input type="hidden" asp-for="Email" />
+        <input type="hidden" asp-for="Telefon" />
+        <input type="hidden" asp-for="DatumKonsultacije" />
+        <input type="hidden" asp-for="Napomena" />
+
+        <div class="alert alert-info">
+            Klijent: <b>@Model.ImePrezimeKlijenta</b> &nbsp; Datum: <b>@Model.DatumKonsultacije.ToString("dd.MM.yyyy")</b>
+        </div>
+
+        <h5>Izaberite slobodan termin</h5>
+        <div class="mb-3">
+            @foreach (var t in Model.SlobodniTermini)
+            {
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="IzabraniTermin" value="@t.Sifra" id="t_@t.Sifra" />
+                    <label class="form-check-label" for="t_@t.Sifra">@t.Naziv</label>
+                </div>
+            }
+        </div>
+
+        <h5>Usluge digitalnog marketinga (izaberite jednu ili više)</h5>
+        <table class="table table-bordered">
+            <thead><tr><th>Izbor</th><th>Usluga</th><th>Prioritet</th><th>Napomena</th></tr></thead>
+            <tbody>
+            @for (int i = 0; i < Model.Usluge.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="hidden" asp-for="Usluge[i].Sifra" />
+                        <input type="hidden" asp-for="Usluge[i].Naziv" />
+                        <input type="checkbox" asp-for="Usluge[i].Izabrana" class="form-check-input" />
+                    </td>
+                    <td>@Model.Usluge[i].Naziv</td>
+                    <td>
+                        <select asp-for="Usluge[i].Prioritet" class="form-select">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                        </select>
+                    </td>
+                    <td><input asp-for="Usluge[i].Napomena" class="form-control" /></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+        <button type="submit" class="btn btn-success">Zakaži konsultaciju</button>
+        <a asp-action="Index" class="btn btn-secondary">Nazad</a>
+    </form>
+}
+
+@section Scripts {
+    <script src="~/js/zakazivanjeValidacije.js"></script>
+}

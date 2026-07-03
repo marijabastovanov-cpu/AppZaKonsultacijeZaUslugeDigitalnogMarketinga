@@ -1,0 +1,24 @@
+@model LoginVM
+@{
+    ViewData["Title"] = "Prijava";
+}
+<h2>Prijava (admin / sekretar)</h2>
+
+@if (!string.IsNullOrEmpty(Model.Greska))
+{
+    <div class="alert alert-danger">@Model.Greska</div>
+}
+
+<form asp-action="Login" method="post" style="max-width:400px;">
+    <div class="mb-3">
+        <label asp-for="KorisnickoIme" class="form-label"></label>
+        <input asp-for="KorisnickoIme" class="form-control" />
+        <span asp-validation-for="KorisnickoIme" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Sifra" class="form-label"></label>
+        <input asp-for="Sifra" class="form-control" />
+        <span asp-validation-for="Sifra" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Prijavi se</button>
+</form>

@@ -1,0 +1,90 @@
+/* Prilagodjena paleta dugmadi - prigusene, uskladjene nijanse */
+:root {
+    --mb-primary: #3A6187;
+    --mb-primary-hover: #2E4E6D;
+    --mb-secondary: #6B7583;
+    --mb-secondary-hover: #565f6b;
+    --mb-success: #4E8A6B;
+    --mb-success-hover: #3F7157;
+    --mb-warning: #C39A46;
+    --mb-warning-hover: #a9853a;
+    --mb-danger: #B15A50;
+    --mb-danger-hover: #974a42;
+}
+
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    box-shadow: none;
+    transition: background-color .15s ease, border-color .15s ease;
+}
+
+.btn-primary {
+    background-color: var(--mb-primary);
+    border-color: var(--mb-primary);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--mb-primary-hover) !important;
+    border-color: var(--mb-primary-hover) !important;
+}
+
+.btn-secondary {
+    background-color: var(--mb-secondary);
+    border-color: var(--mb-secondary);
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+    background-color: var(--mb-secondary-hover) !important;
+    border-color: var(--mb-secondary-hover) !important;
+}
+
+.btn-success {
+    background-color: var(--mb-success);
+    border-color: var(--mb-success);
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+    background-color: var(--mb-success-hover) !important;
+    border-color: var(--mb-success-hover) !important;
+}
+
+.btn-warning {
+    background-color: var(--mb-warning);
+    border-color: var(--mb-warning);
+    color: #fff;
+}
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active {
+    background-color: var(--mb-warning-hover) !important;
+    border-color: var(--mb-warning-hover) !important;
+    color: #fff !important;
+}
+
+.btn-danger {
+    background-color: var(--mb-danger);
+    border-color: var(--mb-danger);
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+    background-color: var(--mb-danger-hover) !important;
+    border-color: var(--mb-danger-hover) !important;
+}
+
+/* Outline varijante  */
+.btn-outline, .btn-outline-primary {
+    color: var(--mb-primary);
+    border-color: var(--mb-primary);
+    background-color: transparent;
+}
+.btn-outline:hover, .btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--mb-primary);
+    border-color: var(--mb-primary);
+}
+
+.btn-outline-secondary {
+    color: var(--mb-secondary);
+    border-color: var(--mb-secondary);
+}
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: var(--mb-secondary);
+    border-color: var(--mb-secondary);
+}

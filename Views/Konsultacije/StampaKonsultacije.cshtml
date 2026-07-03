@@ -1,0 +1,90 @@
+@model KonsultacijaDetaljiVM
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="utf-8" />
+    <title>Zahtev za zakazivanje konsultacija</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 35px; color: #000; }
+        .zaglavlje { border: 1px solid #000; padding: 10px 12px; font-size: 12px; margin-bottom: 18px; }
+        .zaglavlje .naziv { font-weight: bold; font-size: 15px; }
+        .naslov { text-align: center; font-size: 17px; font-weight: bold; margin: 18px 0; letter-spacing: .5px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+        th, td { border: 1px solid #000; padding: 6px 8px; font-size: 13px; text-align: left; vertical-align: top; }
+        .sekcija { background: #d9d9d9; font-weight: bold; text-transform: uppercase; }
+        .oznaka { width: 38%; font-weight: bold; }
+        .podnaslov { font-weight: bold; margin: 6px 0 6px; font-size: 13px; }
+        .termini { font-size: 12px; }
+        .napomena-box { min-height: 46px; }
+        @@media print { .noprint { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="noprint" style="margin-bottom:14px;">
+        <button onclick="window.print()">Štampaj</button>
+    </div>
+
+    <div class="zaglavlje">
+        <span class="naziv">MB STUDIO</span> - Agencija za usluge digitalnog marketinga<br />
+        Trg slobode 1, 23000 Zrenjanin &nbsp;-&nbsp; Tel: 023/345-321 &nbsp;-&nbsp; Email: kontakt@mbstudio.rs
+    </div>
+
+    <div class="naslov">ZAHTEV ZA ZAKAZIVANJE KONSULTACIJA</div>
+
+    <table>
+        <tr><td class="sekcija" colspan="2">Podaci o klijentu</td></tr>
+        <tr><td class="oznaka">Ime i prezime klijenta</td><td>@Model.ImePrezimeKlijenta</td></tr>
+        <tr><td class="oznaka">Naziv firme / organizacije</td><td>@Model.NazivFirme</td></tr>
+        <tr><td class="oznaka">Email</td><td>@Model.Email</td></tr>
+        <tr><td class="oznaka">Kontakt telefon</td><td>@Model.Telefon</td></tr>
+    </table>
+
+    <table>
+        <tr><td class="sekcija" colspan="2">Podaci o terminu</td></tr>
+        <tr><td class="oznaka">Željeni datum konsultacija</td><td>@Model.DatumKonsultacije.ToString("dd.MM.yyyy")</td></tr>
+        <tr><td class="oznaka">Izabrani termin</td><td>@Model.NazivTermina</td></tr>
+        <tr>
+            <td colspan="2" class="termini">
+                <b>Raspoloživi termini (najviše 6 dnevno, po 60 min):</b><br />
+                08:00-09:00 &nbsp;|&nbsp; 09:00-10:00 &nbsp;|&nbsp; 10:00-11:00 &nbsp;|&nbsp;
+                11:00-12:00 &nbsp;|&nbsp; 12:00-13:00 &nbsp;|&nbsp; 13:00-14:00
+            </td>
+        </tr>
+    </table>
+
+    <div class="podnaslov">Usluge digitalnog marketinga za koje se traži konsultacija (1 ili više):</div>
+    <table>
+        <tr><th style="width:8%">R.br</th><th>Usluga</th><th style="width:15%">Prioritet</th><th style="width:30%">Napomena</th></tr>
+        @{ int rb = 1; }
+        @foreach (var s in Model.Stavke)
+        {
+            <tr>
+                <td>@rb</td>
+                <td>@s.NazivUsluge</td>
+                <td>@s.Prioritet</td>
+                <td>@s.Napomena</td>
+            </tr>
+            rb++;
+        }
+    </table>
+
+    <div class="podnaslov">Kratak opis zahteva / Napomena klijenta:</div>
+    <table>
+        <tr><td class="napomena-box">@Model.Napomena</td></tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="oznaka">Datum podnošenja zahteva</td>
+            <td>@Model.DatumPodnosenja.ToString("dd.MM.yyyy")</td>
+        </tr>
+        <tr>
+            <td class="oznaka">Status zahteva</td>
+            <td>Zakazano</td>
+        </tr>
+    </table>
+</body>
+</html>

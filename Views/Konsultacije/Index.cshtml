@@ -1,0 +1,48 @@
+@model KonsultacijeIndexVM
+@{
+    ViewData["Title"] = "Konsultacije";
+}
+<h2>Konsultacije</h2>
+
+<form method="get" asp-action="Index" class="row g-2 mb-3">
+    <div class="col-auto">
+        <input type="date" name="datum" value="@(Model.Datum?.ToString("yyyy-MM-dd"))" class="form-control" />
+    </div>
+    <div class="col-auto"><button type="submit" class="btn btn-secondary">Filtriraj</button></div>
+    <div class="col-auto"><a asp-action="Index" class="btn btn-outline-primary">Prikaži sve</a></div>
+    <div class="col-auto"><a asp-action="Stampa" asp-route-datum="@(Model.Datum?.ToString("yyyy-MM-dd"))" target="_blank" class="btn btn-outline-dark">Štampa spiska</a></div>
+</form>
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr><th>Klijent</th><th>Firma</th><th>Datum</th><th>Termin</th><th>Email</th><th>Telefon</th><th>Akcije</th></tr>
+    </thead>
+    <tbody>
+    @if (Model.Konsultacije.Count == 0)
+    {
+        <tr><td colspan="7" class="text-center">Nema konsultacija za prikaz.</td></tr>
+    }
+    else
+    {
+        @foreach (var k in Model.Konsultacije)
+        {
+            <tr>
+                <td>@k.ImePrezimeKlijenta</td>
+                <td>@k.NazivFirme</td>
+                <td>@k.DatumKonsultacije.ToString("dd.MM.yyyy")</td>
+                <td>@k.NazivTermina</td>
+                <td>@k.Email</td>
+                <td>@k.Telefon</td>
+                <td>
+                    <a asp-action="Detalji" asp-route-id="@k.Id" class="btn btn-sm btn-info">Detalji</a>
+                    <a asp-action="Izmeni" asp-route-id="@k.Id" class="btn btn-sm btn-warning">Izmeni</a>
+                    <form asp-action="Obrisi" asp-route-id="@k.Id" method="post" class="d-inline"
+                          onsubmit="return confirm('Obrisati ovu konsultaciju?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Briši</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>

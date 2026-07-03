@@ -1,0 +1,23 @@
+@model UslugaVM
+@{
+    ViewData["Title"] = "Izmena usluge";
+}
+<h2>Izmena usluge</h2>
+<form asp-action="Izmeni" method="post" style="max-width:500px;">
+    <input type="hidden" asp-for="StaraSifra" />
+    <div class="mb-3">
+        <label asp-for="Sifra" class="form-label"></label>
+        <input asp-for="Sifra" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Naziv" class="form-label"></label>
+        <input asp-for="Naziv" class="form-control" />
+        <span asp-validation-for="Naziv" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Opis" class="form-label"></label>
+        <textarea asp-for="Opis" class="form-control" rows="2"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Sačuvaj</button>
+    <a asp-action="Index" class="btn btn-secondary">Nazad</a>
+</form>

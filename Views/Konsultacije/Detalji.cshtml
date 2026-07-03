@@ -1,0 +1,31 @@
+@model KonsultacijaDetaljiVM
+@{
+    ViewData["Title"] = "Detalji konsultacije";
+}
+<h2>Detalji konsultacije</h2>
+
+<table class="table table-bordered">
+    <tr><th style="width:30%">Klijent</th><td>@Model.ImePrezimeKlijenta</td></tr>
+    <tr><th>Firma</th><td>@Model.NazivFirme</td></tr>
+    <tr><th>Email</th><td>@Model.Email</td></tr>
+    <tr><th>Telefon</th><td>@Model.Telefon</td></tr>
+    <tr><th>Datum</th><td>@Model.DatumKonsultacije.ToString("dd.MM.yyyy")</td></tr>
+    <tr><th>Termin</th><td>@Model.NazivTermina</td></tr>
+    <tr><th>Napomena</th><td>@Model.Napomena</td></tr>
+    <tr><th>Datum podnošenja</th><td>@Model.DatumPodnosenja.ToString("dd.MM.yyyy HH:mm")</td></tr>
+</table>
+
+<h5>Izabrane usluge (stavke)</h5>
+<table class="table table-bordered">
+    <thead><tr><th>Usluga</th><th>Prioritet</th><th>Napomena</th></tr></thead>
+    <tbody>
+    @foreach (var s in Model.Stavke)
+    {
+        <tr><td>@s.NazivUsluge</td><td>@s.Prioritet</td><td>@s.Napomena</td></tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="StampaKonsultacije" asp-route-id="@Model.Id" target="_blank" class="btn btn-outline-dark">Parametarska štampa</a>
+<a asp-action="Izmeni" asp-route-id="@Model.Id" class="btn btn-warning">Izmeni</a>
+<a asp-action="Index" class="btn btn-secondary">Nazad</a>

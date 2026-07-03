@@ -1,0 +1,10 @@
+@model ZakazivanjeVM
+@{
+    ViewData["Title"] = "Uspešno zakazano";
+}
+<div class="alert alert-success">
+    <h3>Konsultacija je uspešno zakazana!</h3>
+    <p>Klijent: <b>@Model.ImePrezimeKlijenta</b></p>
+    <p>Datum: <b>@Model.DatumKonsultacije.ToString("dd.MM.yyyy")</b></p>
+</div>
+<a class="btn btn-primary" asp-action="Index">Novo zakazivanje</a>

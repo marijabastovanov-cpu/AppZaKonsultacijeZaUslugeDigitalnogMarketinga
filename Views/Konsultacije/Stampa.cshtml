@@ -1,0 +1,33 @@
+@model KonsultacijeIndexVM
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="utf-8" />
+    <title>Spisak konsultacija</title>
+    <style>
+        body { font-family: Arial; margin: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #000; padding: 6px; font-size: 13px; }
+        h2 { text-align: center; }
+        @@media print { .noprint { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="noprint"><button onclick="window.print()">Štampaj</button></div>
+    <h2>MB Studio - Spisak konsultacija@(Model.Datum.HasValue ? " (" + Model.Datum.Value.ToString("dd.MM.yyyy") + ")" : "")</h2>
+    <table>
+        <tr><th>Klijent</th><th>Firma</th><th>Datum</th><th>Termin</th><th>Email</th><th>Telefon</th></tr>
+        @foreach (var k in Model.Konsultacije)
+        {
+            <tr>
+                <td>@k.ImePrezimeKlijenta</td><td>@k.NazivFirme</td>
+                <td>@k.DatumKonsultacije.ToString("dd.MM.yyyy")</td><td>@k.NazivTermina</td>
+                <td>@k.Email</td><td>@k.Telefon</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

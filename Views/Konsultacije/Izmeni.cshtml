@@ -1,0 +1,50 @@
+@model KonsultacijaIzmenaVM
+@{
+    ViewData["Title"] = "Izmena konsultacije";
+}
+<h2>Izmena konsultacije</h2>
+
+@if (!string.IsNullOrEmpty(Model.Greska))
+{
+    <div class="alert alert-danger">@Model.Greska</div>
+}
+
+<form asp-action="Izmeni" method="post" style="max-width:600px;">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="ImePrezimeKlijenta" class="form-label"></label>
+        <input asp-for="ImePrezimeKlijenta" class="form-control" />
+        <span asp-validation-for="ImePrezimeKlijenta" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="NazivFirme" class="form-label"></label>
+        <input asp-for="NazivFirme" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Telefon" class="form-label"></label>
+        <input asp-for="Telefon" class="form-control" />
+        <span asp-validation-for="Telefon" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DatumKonsultacije" class="form-label"></label>
+        <input asp-for="DatumKonsultacije" type="date" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="IDTermin" class="form-label"></label>
+        <select asp-for="IDTermin" asp-items="Model.Termini" class="form-select">
+            <option value="">-- izaberite termin --</option>
+        </select>
+        <span asp-validation-for="IDTermin" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Napomena" class="form-label"></label>
+        <textarea asp-for="Napomena" class="form-control" rows="2"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Sačuvaj</button>
+    <a asp-action="Index" class="btn btn-secondary">Nazad</a>
+</form>
