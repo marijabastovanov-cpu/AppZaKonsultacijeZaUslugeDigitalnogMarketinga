@@ -1,0 +1,15 @@
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\bin\Debug\net8.0\PoslovnaLogika.deps.json
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\bin\Debug\net8.0\PoslovnaLogika.dll
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\bin\Debug\net8.0\PoslovnaLogika.pdb
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\bin\Debug\net8.0\SlojPodataka.dll
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\bin\Debug\net8.0\SlojPodataka.pdb
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\PoslovnaLogika.csproj.AssemblyReference.cache
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\PoslovnaLogika.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\PoslovnaLogika.AssemblyInfoInputs.cache
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\PoslovnaLogika.AssemblyInfo.cs
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\PoslovnaLogika.csproj.CoreCompileInputs.cache
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\Poslovna.5AADE7AF.Up2Date
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\PoslovnaLogika.dll
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\refint\PoslovnaLogika.dll
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\PoslovnaLogika.pdb
+C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PoslovnaLogika\obj\Debug\net8.0\ref\PoslovnaLogika.dll
