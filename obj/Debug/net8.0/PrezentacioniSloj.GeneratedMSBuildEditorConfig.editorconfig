@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PrezentacioniSloj
+build_property.RootNamespace = PrezentacioniSloj
+build_property.ProjectDir = C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PrezentacioniSloj\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\marij\OneDrive\Desktop\DigitalniMarketing\PrezentacioniSloj
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Konsultacije/Detalji.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29uc3VsdGFjaWplXERldGFsamkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Konsultacije/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29uc3VsdGFjaWplXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Konsultacije/Izmeni.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29uc3VsdGFjaWplXEl6bWVuaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Konsultacije/Stampa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29uc3VsdGFjaWplXFN0YW1wYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Konsultacije/StampaKonsultacije.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29uc3VsdGFjaWplXFN0YW1wYUtvbnN1bHRhY2lqZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Nalog/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFsb2dcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Usluge/Dodaj.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNsdWdlXERvZGFqLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Usluge/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNsdWdlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Usluge/Izmeni.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNsdWdlXEl6bWVuaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Zakazivanje/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/Zakazivanje/Uspeh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFrYXppdmFuamVcVXNwZWguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marij/OneDrive/Desktop/DigitalniMarketing/PrezentacioniSloj/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
